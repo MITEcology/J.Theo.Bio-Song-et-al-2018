@@ -23,15 +23,11 @@ Omega(A) #relative size of interaction matrix
 Omega(B) #relative size of interaction matrix
 Omega_overlap(A, B) #overlap of two interaction matrices
 
-# example of the normalized size of the feasibility domain of a random interaction matrix under linear biological equalities-----------------
+# example of the normalized size of the feasibility domain of a random interaction matrix Note that Omega is the normalized value, i.e., Omega^(1/S)---------
 set.seed(3)
 A <- interaction_matrix_random(num, stren, conne) #generate a random interaction matrix
-I1 <- c(1, 2, -1, 1) #put a linear inequality contraint. The interpretation is 1*r1 + 2*r2 - r3 + r4 = 1
-I2 <- c(1, 2, 0, 0) #put a linear inequality contraint. The interpretation is 1*r1 + 2*r2 = 1
 
 Omega(A) #relative size of the original interaction matrix
-Omega_overlap(A, I1) #the size of the feasibility domain of a random interaction matrix under linear biological constriants I1
-Omega_overlap(A, I2) #the size of the feasibility domain of a random interaction matrix under linear biological constriants I2
 
 # example of the normalized size of the feasibility domain of a random interaction matrix under linear biological inequalities-----------------
 set.seed(4)
